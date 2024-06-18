@@ -7,6 +7,6 @@ import (
 func Setup(app *AppInit) {
 	swatchesContainer := BuildSwatches(app)
 	colorPicker := SetupColorPicker(app)
-	appLayout := container.NewBorder(nil, swatchesContainer, nil, colorPicker)
+	appLayout := container.NewBorder(nil, swatchesContainer, nil, colorPicker, app.PixlCanvas)
 	app.PixelWindow.SetContent(appLayout)
 }
